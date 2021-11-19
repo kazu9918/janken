@@ -5,12 +5,16 @@ class Judge
   end
 
   def result
-    if @hand1 == @hand2
+    if draw?
       "引き分けです。"
     elsif (@hand1 - @hand2) % 3 == 1
       "あなたの勝ち"
     else
       "あなたの負けです"
     end
+  end
+
+  def draw?
+    @hand1 == @hand2
   end
 end
