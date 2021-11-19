@@ -1,20 +1,15 @@
 class Judge
   def initialize(hand1, hand2)
-    @hand1 = hand1
-    @hand2 = hand2
-  end
-
-  def result
-    if draw?
-      "引き分けです。"
-    elsif (@hand1 - @hand2) % 3 == 1
-      "あなたの勝ち"
+    if hand1 == hand2
+      @result = "引き分けです。\n"
+    elsif (hand1 - hand2) % 3 == 1
+      @result = "あなたの勝ち\n"
     else
-      "あなたの負けです"
+      @result = "あなたの負けです\n"
     end
   end
 
-  def draw?
-    @hand1 == @hand2
+  def result
+    @result
   end
 end
