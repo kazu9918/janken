@@ -1,3 +1,4 @@
+require_relative './set.rb'
 require_relative './judge.rb'
 
 class Game
@@ -7,13 +8,7 @@ class Game
   end
 
   def start
-    begin
-      hand1 = @player1.show_hand
-      hand2 = @player2.show_hand
-      hands = ["グー", "チョキ", "パー"]
-      print "あなたの手:#{hands[hand1]}, プログラムの手:#{hands[hand2]}\n"
-      judge = Judge.new(hand1, hand2)
-      print judge.result
-    end while judge.draw?
+    set = Set.new(@player1, @player2)
+    set.start
   end
 end

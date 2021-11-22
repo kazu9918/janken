@@ -5,9 +5,9 @@ class Judge
   end
 
   def result
-    if judge.draw?
+    if draw?
       "引き分けです"
-    elsif judge.win?
+    elsif win?
       "あなたの勝ちです"
     else
       "あなたの負けです"
