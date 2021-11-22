@@ -6,14 +6,24 @@ class Set
     @player2 = player2
   end
 
-  def start
+  def one_set
     begin
       hand1 = @player1.show_hand
       hand2 = @player2.show_hand
       hands = ["グー", "チョキ", "パー"]
-      print "あなたの手:#{hands[hand1]}, プログラムの手:#{hands[hand2]}\n"
+      puts "あなたの手:#{hands[hand1]}, プログラムの手:#{hands[hand2]}\n"
       judge = Judge.new(hand1, hand2)
-      print judge.result
+      puts judge.result
     end while judge.draw?
+
+    if judge.win?
+      @winner = @player1
+    else
+      @winner = @player2
+    end
+  end
+
+  def winner
+    @winner
   end
 end
