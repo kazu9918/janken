@@ -7,10 +7,12 @@ class Set
   end
 
   def one_set
+    # name1 = @player1.get_name
+    # name2 = @player2.get_name
     begin
       hand1 = @player1.show_hand
       hand2 = @player2.show_hand
-      puts "あなたの手:#{hand1} プログラムの手:#{hand2}\n"
+      puts "あなたの手:#{hand1} コンピューターの手:#{hand2}\n"
       judge = Judge.new(hand1, hand2)
       puts judge.result
     end while judge.draw?
