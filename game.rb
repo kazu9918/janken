@@ -1,5 +1,4 @@
 require_relative './set.rb'
-require_relative './count.rb'
 
 class Game
   def initialize(player1, player2)

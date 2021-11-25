@@ -15,10 +15,10 @@ class Judge
   end
 
   def draw?
-    @hand1 == @hand2
+    @hand1.draw_with?(@hand2)
   end
 
   def win?
-    (@hand1 - @hand2) % 3 == 1
+    @hand1.defeat?(@hand2)
   end
 end
