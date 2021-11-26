@@ -3,6 +3,10 @@ require_relative './scissors_hand'
 require_relative './paper_hand'
 
 class Program
+  def name
+    'コンピューター'
+  end
+
   def show_hand
     n = rand(3)
 

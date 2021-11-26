@@ -4,10 +4,13 @@ require_relative './paper_hand'
 require_relative './strongest_hand'
 
 class Man
-  # def get_name
-  #   print "あなたの名前を教えて下さい"
-  #   gets.chomp
-  # end
+  def initialize(name)
+    @name = name
+  end
+
+  def name
+    @name
+  end
 
   def show_hand
     begin

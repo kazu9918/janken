@@ -1,5 +1,7 @@
 class Judge
-  def initialize(hand1, hand2)
+  def initialize(name1, name2, hand1, hand2)
+    @name1 = name1
+    @name2 = name2
     @hand1 = hand1
     @hand2 = hand2
   end
@@ -8,9 +10,9 @@ class Judge
     if draw?
       "引き分けです"
     elsif win?
-      "あなたの勝ちです"
+      "#{@name1}の勝ちです"
     else
-      "あなたの負けです"
+      "#{@name2}の勝ちです"
     end
   end
 
