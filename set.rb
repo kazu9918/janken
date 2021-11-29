@@ -6,7 +6,7 @@ class Set
     @player2 = player2
   end
 
-  def one_set
+  def start
     begin
       hand1 = @player1.show_hand
       hand2 = @player2.show_hand
