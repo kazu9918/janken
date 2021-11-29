@@ -7,7 +7,7 @@ class Program
     'コンピューター'
   end
 
-  def show_hand
+  def select_hand
     n = rand(3)
 
     if n == 0

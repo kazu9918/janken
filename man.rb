@@ -12,7 +12,7 @@ class Man
     @name
   end
 
-  def show_hand
+  def select_hand
     begin
       print "最初はグー、じゃんけん...\n[0]:グー\n[1]:チョキ\n[2]:パー\n[3]:最強手\n#{@name}は(0,1,2,3いずれかを入力してEnter)"
       n = gets.chomp
