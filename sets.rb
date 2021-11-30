@@ -1,9 +1,9 @@
+require_relative "./set.rb"
+
 class Sets
   def initialize(player1, player2)
     @player1 = player1
     @player2 = player2
-    player1_win_count = 0
-    player2_win_count = 0
     @sets = []
   end
 
@@ -35,5 +35,12 @@ class Sets
     else
       print "#{@player2.name}の勝ちです"
     end
+  end
+
+  def start_set
+    print_count
+    set = Set.new(@player1, @player2)
+    set.start
+    push(set)
   end
 end

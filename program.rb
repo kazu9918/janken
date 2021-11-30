@@ -1,6 +1,4 @@
-require_relative './rock_hand'
-require_relative './scissors_hand'
-require_relative './paper_hand'
+require_relative './select_hand'
 
 class Program
   def name
@@ -10,12 +8,7 @@ class Program
   def select_hand
     n = rand(3)
 
-    if n == 0
-      RockHand.new
-    elsif n == 1
-      ScissorsHand.new
-    else
-      PaperHand.new
-    end
+    select_hand = SelectHand.new(n.to_i)
+    select_hand.result
   end
 end
