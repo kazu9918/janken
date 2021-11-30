@@ -17,7 +17,7 @@ class Judge
   end
 
   def draw?
-    @hand1.draw_with?(@hand2)
+    @hand1.is_a?(@hand2.class)
   end
 
   def win?
